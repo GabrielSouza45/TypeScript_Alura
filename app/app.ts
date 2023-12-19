@@ -7,7 +7,6 @@ const form = document.querySelector('.form'); // Pega o objeto da classe form no
 form.addEventListener('submit', event => { // igual lambda, quando o evento de 'submit' acontecer:
 
     event.preventDefault(); // não recarrega a página como é padrão do submit de formulario
-
     controller.adiciona(); // chama a função adiciona do controller
 
 });
