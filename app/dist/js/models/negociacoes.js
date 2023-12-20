@@ -7,6 +7,5 @@ export class Negociacoes {
     }
     lista() {
         return this.negociacoes;
-        // return [...this.negociacoes]; // Devolve uma nova lista com os mesmos itens da outra
     }
 }
