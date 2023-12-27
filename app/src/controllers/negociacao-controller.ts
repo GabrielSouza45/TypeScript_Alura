@@ -5,6 +5,7 @@ import { Negociacao } from "../models/negociacao.js";
 import { Negociacoes } from "../models/negociacoes.js";
 import { MensagemView } from "../views/mensagem-view.js";
 import { NegociacoesView } from "../views/negociacoes-view.js";
+import { NegociacaoService } from "../services/negociacao-service.js";
 
 export class NegociacaoController {
 
@@ -17,6 +18,7 @@ export class NegociacaoController {
     private negociacoes = new Negociacoes();
     private negociacoesView = new NegociacoesView('#negociacoesView');
     private mensagemView = new MensagemView('#mensagemView');
+    private negociacaoService = new NegociacaoService();
 
     constructor() {
         this.negociacoesView.update(this.negociacoes);
@@ -47,6 +49,16 @@ export class NegociacaoController {
     private atualizaView(): void{
         this.negociacoesView.update(this.negociacoes);
         this.mensagemView.update('Negociação adicionada com sucesso!');
+    }
+
+    public importaDados(){
+        this.negociacaoService.obterNegociacoesDoDia()
+        .then(negociacoesDeHoje => {
+            for (let negociacao of negociacoesDeHoje)[
+                this.negociacoes.adiciona(negociacao)
+            ]
+            this.negociacoesView.update(this.negociacoes);
+        })
     }
 
     private validaData(negociacao: Negociacao): boolean{
