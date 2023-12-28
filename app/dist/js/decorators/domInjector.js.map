@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "file": "domInjector.js",
+    "sourceRoot": "",
+    "sources": [
+        "../../../src/decorators/domInjector.ts"
+    ],
+    "names": [],
+    "mappings": "AAAA,MAAM,UAAU,WAAW,CAAC,QAAgB;IAC1C,OAAO,UAAU,MAAW,EAAE,WAAmB;QAC/C,IAAI,QAAqB,CAAC;QAE1B,MAAM,MAAM,GAAG;YACb,IAAI,CAAC,QAAQ,EAAE;gBACb,QAAQ,GAAgB,QAAQ,CAAC,aAAa,CAAC,QAAQ,CAAC,CAAC;aAC1D;YACD,OAAO,QAAQ,CAAC;QAClB,CAAC,CAAC;QAEF,MAAM,CAAC,cAAc,CAAC,MAAM,EAAE,WAAW,EAAE,EAAE,GAAG,EAAE,MAAM,EAAE,CAAC,CAAC;IAC9D,CAAC,CAAC;AACJ,CAAC"
+}

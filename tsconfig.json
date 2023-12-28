@@ -6,7 +6,13 @@
         "noImplicitAny": true,
         "removeComments": true,
         "strictNullChecks": true,
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "sourceMap": true 
+        // Debugando aplicação TS:
+        // 1. Ativar "sourceMap": true 
+        // 2. Navegador: ctrl+p (Digite o nome do arquivo.ts) 
+        // 3. clicar no numero da linha para adicionar um BreakPoint
+        // 4. Seguir projeto
     },
     "include": ["app/src/**/*"]
 }
